@@ -1,0 +1,11 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: theme('screens.xxl');
+    @apply mx-auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
