@@ -1,0 +1,30 @@
+Guide to Accessibility
+
+Semantic HTML
+
+Using semantic HTML elements has ARIA already built in. By using tags like header, main, article, section, aside, and footer, screen readers already know the flow of content.  
+
+Let's look at an example blog post:
+
+
+
+Here is boilerplate for a semantic HTML page within the <body> tag:
+<body>
+    <header>
+        Repeatable content like navigation bars
+    </header>
+    <main>
+        Unique page content 
+        <article>
+            Content that makes sense independent of other content on page
+            Examples include blog posts, products, and news articles
+            <aside>
+                Information that is tangentially related to the article
+            </aside>
+        </article>
+    </main>
+
+
+
+Header tag: 
+Main tag: The main tag should contain only unique page content. 

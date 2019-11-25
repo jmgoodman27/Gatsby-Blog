@@ -10,8 +10,8 @@ module.exports = {
       'xxxl': '2499px'
     },
     fontFamily: {
-      header: ['HelveticaNeue'],
-      body: ['HelveticaNeue']
+      header: ['Roboto'],
+      body: ['Source Sans Pro']
     },
     colors: {
       transparent: 'transparent',
@@ -29,7 +29,7 @@ module.exports = {
       red: '#ba0c2f',
       outline: '#4D90FE',
       cerulean: '#008fbe',
-      blue: '#003c71',
+      blue: '#0073B5',
       darkpurple: '#5b129b',
       graphite: '#454343',
       rosegold:'#9C6D74',
@@ -63,6 +63,7 @@ module.exports = {
       '18': '18px',
       '19': '19px',
       '20': '20px',
+      '22': '22px',
       '25': '25px',
       '30': '30px',
       '35': '35px',

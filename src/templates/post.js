@@ -1,16 +1,26 @@
 import React from "react"
-import { graphql, Link} from "gatsby"
+import { graphql } from "gatsby"
+import styled from '@emotion/styled'
+import { Link } from "gatsby"
+
 export default function Template({ data }) {
-  const { frontmatter, html } = data.markdownRemark
+  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark
+
+  const PostContent = styled.div`
+    p {
+      padding: 10px;
+    }
+  `
+
   return (
-    <div className="blog-post">
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div
-        className="blog-post-content"
+    <div className="p-16">
+      <Link to="/blog">Back to Blog</Link>
+      <h1 className="text-45 font-bold text-center">{frontmatter.title}</h1>
+      <h2 class="text-center">{frontmatter.date}</h2>
+      <PostContent
         dangerouslySetInnerHTML={{ __html: html }}
       />
-      <Link to="/blog">Go Back</Link>
     </div>
   )
 }

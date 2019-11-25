@@ -4,8 +4,33 @@
 @tailwind utilities;
 
 .container {
-    max-width: theme('screens.xxl');
-    @apply mx-auto;
+  max-width: 1600px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @screen md {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  @screen xl {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  margin: 0 auto;
+}
+
+body {
+  @apply font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-header;
+  margin: 0;
 }

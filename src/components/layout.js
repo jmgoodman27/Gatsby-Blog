@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -13,8 +14,11 @@ const Layout = ({ children }) => {
     }
   `)
 
-
   return (
+    <>
+    <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Sans+Pro:300,400" rel="stylesheet" />
+    </Helmet>
     <div>
       <div>
         <main>{children}</main>
@@ -25,6 +29,7 @@ const Layout = ({ children }) => {
         </footer>
       </div>
     </div>
+    </>
   )
 }
 
