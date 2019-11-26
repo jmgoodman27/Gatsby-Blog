@@ -3,11 +3,10 @@ path: "/posts/slate"
 title: "Shopify Development with Slate v1"
 date: "2018-08-14"
 ---
-[Slate](https://github.com/Shopify/slate){:target="_blank"} is a new Shopify workflow toolkit that is currently in beta (v1) that is designed to improve the theme development experience. Slate uses a host of tools under the hood including Shopify Theme Kit, Webpack, Babel, ESLint, Stylelint, and Jest in addition to its own custom scripts and logic. Combined with [Starter Theme](https://github.com/Shopify/starter-theme), Slate is a huge step forward in Shopify theme development. 
+<a href="https://github.com/Shopify/slate" target="_blank" class="underline">Slate</a> is a new Shopify workflow toolkit that is currently in beta (v1) that is designed to improve the theme development experience. Slate uses a host of tools under the hood including Shopify Theme Kit, Webpack, Babel, ESLint, Stylelint, and Jest in addition to its own custom scripts and logic. Combined with [Starter Theme](https://github.com/Shopify/starter-theme), Slate is a huge step forward in Shopify theme development. 
 
+![Slate](../images/slate.jpg)
 
-<br />
-![Slate](../assets/img/slate.jpg)
 
 ##### Lightning Fast Development
 
@@ -28,7 +27,7 @@ Shopify's Starter Theme will be cloned by default and dependencies will be autom
 
 An .env file is used to connect the local environment with a remote Shopify theme through a store url, API password, and theme ID. A production .env file can also be created (named ".env.production") and mapped to a separate production theme. The .env file looks like this: 
 
-{% highlight html %}
+```html
 # The myshopify.com URL to your Shopify store 
 SLATE_STORE=slate.myshopify.com
 
@@ -42,7 +41,7 @@ SLATE_THEME_ID=12345678901
 
 # A list of file patterns to ignore, with each list item separated by ':' 
 SLATE_IGNORE_FILES=
-{% endhighlight %}
+```
 
 ##### Running Slate
 

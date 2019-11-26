@@ -6,9 +6,8 @@ import Posts from "../components/posts"
 
 const Blog = ({ data }) => (
   <Layout>
-    <Header title="Blog"></Header>
+    <Header title="Blog" description="Read about my projects, skills, tools, and preferences on all things web development."></Header>
     <Posts data={data} grid></Posts>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
@@ -20,7 +19,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 150)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path

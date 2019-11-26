@@ -4,10 +4,11 @@ import PostLink from "../components/post-link"
 import { css } from 'linaria';
 
 const gridStyles = css`
-@apply py-32;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: grid;
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
   grid-template-columns: 1fr;
   @screen md {
     grid-template-columns: 1fr 1fr;
@@ -20,6 +21,7 @@ const Posts = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  children
 }) => {
   let Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
@@ -29,11 +31,12 @@ const Posts = ({
       Posts = Posts.slice(0, numPosts);
     }
 
-    let styles = 'container py-12 ';
+    let styles = 'container pt-16 md:pt-8 ';
     if (grid) styles += gridStyles;
 
     return (
       <div className={styles}>
+        { children }
         {Posts}
       </div>
     )

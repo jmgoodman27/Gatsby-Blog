@@ -7,8 +7,6 @@ Sharing products and content on social media can be an essential part of an ecom
 
 In an example Tweet, we can see that a product title, description, and image is needed for the link preview:
 
-<img src="../assets/img/open-graph-tweet.jpg" alt="Tweet" width="400"/>
-
 The Open Graph protocol has a few basic properties to define these and more: 
 - \- og:title
 - \- og:description
@@ -30,7 +28,7 @@ A couple of additional properties are required for Twitter:
 
 Putting it all together, we get something like this code:
 
-{% highlight html %}
+```html
 <meta property="og:url" content="ecommerce-site.com">
 <meta property="og:title" content="Product Name">
 <meta property="og:type" content="product">
@@ -46,7 +44,7 @@ Putting it all together, we get something like this code:
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:type" content="product">
 <meta property="twitter:description" content="Description of product...">
-{% endhighlight %}
+```
 
 That's basically it for defining data for our product previews on social media!
 
