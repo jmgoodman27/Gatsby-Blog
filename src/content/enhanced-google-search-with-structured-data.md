@@ -1,5 +1,5 @@
 ---
-path: "/posts/ehanced-google-search-with-structured-data"
+path: "/posts/enhanced-google-search-with-structured-data"
 title: "Enhanced Google Search with Structured Data"
 date: "2018-08-10"
 ---
@@ -57,7 +57,7 @@ Google has a [complete list of rich result features](https://developers.google.c
 
 Google recommends adding markup using [JSON-LD](https://json-ld.org/){:target="_blank"} (JSON for Linking Data) like so:
 
- {% highlight json %}
+```Json
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -66,7 +66,7 @@ Google recommends adding markup using [JSON-LD](https://json-ld.org/){:target="_
   "name": "Example"
 }
 </script>
-{% endhighlight %}
+```
 
 Writing structured data with JSON-LD keeps data grouped together and away from actual page content. This keeps it neatly packaged for maintenance instead of littered throughout the HTML. Each webpage can have more than one piece of structured data and they can be placed in either the  <head> or <body> regions of a page. [Google's documentation](https://developers.google.com/search/docs/guides/intro-structured-data){:target="_blank"}  has examples and guides for each content type.
 

@@ -17,9 +17,9 @@ Slate was primarily built to speed up development and it certainly shows. While 
 To use Slate v1, Node.js v8.9.4 or higher needs to be installed. The easiest way to install a new version of Node is with [node version manager](https://github.com/creationix/nvm){:target="_blank"}. 
 
 Once the right version of Node is installed, it is easy to set up a new Slate project. After navigating to the desired directory, we can run one simple command:
-{% highlight bash %}
+```Bash
 npx create-slate-theme our-theme-name 
-{% endhighlight %}
+```
 
 Shopify's Starter Theme will be cloned by default and dependencies will be automatically installed. 
 
@@ -82,9 +82,9 @@ With developer tools, we can check to see if Hot Module Replacement is working b
 ##### Creating a New Starter Theme
 
 If we want to use our own custom theme with Slate, we can push our theme to a new Github repository and run:
-{% highlight bash %}
+```Bash
 npx create-slate-theme theme-name username/repository-name
-{% endhighlight %}
+```
 
 ##### My Thoughts on Slate
 

@@ -10,7 +10,7 @@ CSS Grid is the addition to CSS that we've been waiting years for. No more table
 
 Let's first look at how to create a basic grid with CSS:
 
- {% highlight css %}
+ ```css
 .grid {
   /* Activate grid */
   display: grid;
@@ -19,27 +19,27 @@ Let's first look at how to create a basic grid with CSS:
   /* Define rows and their heights */
   grid-template-rows: 150px 150px;
 }
-{% endhighlight %}
+```
 
 A grid can have any number of columns defined with multiple ways to define widths:
 
- {% highlight css %}
+```CSS
 /* 2 columns each 150px wide */
 grid-template-columns: 150px 150px;
 /* 3 columns each 1 fractional unit of the available space */
 grid-template-columns: 1fr 1fr 1fr;
 /* 5 columns with a variety of units */
 grid-template-columns: 20px 10em 20% 2fr 1fr;
-{% endhighlight %}
+```
 
 The same thing can be done with rows and their heights:
 
- {% highlight css %}
+```CSS
 /* 2 rows each 150px high */
 grid-template-rows: 150px 150px;
 /* 3 rows each 1 fractional unit of the available space (container height must be defined) */
 grid-template-columns: 1fr 1fr 1fr;
-{% endhighlight %}
+```
 
 Grids can be created just by knowing these two properties:
 
@@ -57,12 +57,12 @@ In that example, we had 4 grid items and 4 tracks. But what happens if we have m
 
 CSS Grid will automatically place grid items into tracks on the grid. If we want control over what goes where, we use these properties: 
 
- {% highlight css %}
+```CSS
 .grid_item {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-{% endhighlight %}
+```
 
 These numbers refer to the grid lines, not the tracks. That grid item will start at line 1 and end at line 2 from left to right for columns and top to bottom for rows. Here is a visual from [Mozilla's docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout){:target="_blank"}: 
 
@@ -70,13 +70,13 @@ These numbers refer to the grid lines, not the tracks. That grid item will start
 
 We can also start and span a certain length:
 
- {% highlight css %}
+```CSS
 .grid_item {
   /* Start at line 1 and end at line 3 */
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 }
-{% endhighlight %}
+```
 
 ##### Atomic CSS Grids 
 
@@ -94,7 +94,7 @@ Now let's look at .grid-2.
 
 This will give us a two column grid with each column being 1 fractional unit. This grid is not responsive, meaning it'll keep these 2 columns at all screen widths. If we wanted to only apply the two columns at a breakpoint, here is what the code would look like: 
 
- {% highlight sass %}
+ ```Sass
 .grid-2 {
   display: grid;
   grid-auto-rows: 150px;
@@ -104,7 +104,7 @@ This will give us a two column grid with each column being 1 fractional unit. Th
     grid-template-columns: repeat(2, 1fr);
   }
 }
-{% endhighlight %}
+```
 
 The grid will default to a one column layout when grid-template-columns is not defined. 
 
@@ -114,7 +114,7 @@ Having these grids ready to go makes creating layouts even faster.
 
 The only problem with using CSS Grid is its lack of full browser support. It's not a huge deal considering IE11 has partial support and Opera Mini is the only browser with no support. In any case, we can create a fallback by wrapping our grid code in a @supports feature: 
 
- {% highlight css %}
+```CSS
   @supports(display:grid) {
     .grid {
         display: grid;
@@ -124,7 +124,7 @@ The only problem with using CSS Grid is its lack of full browser support. It's n
   .grid {
       display: flex;
   }
-{% endhighlight %}
+```
 
 For modern browsers, it'll check if grid is supported and apply that code. For older browsers that don't understand @supports, it'll just apply the flexbox fallback.
 

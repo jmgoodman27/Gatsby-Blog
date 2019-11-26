@@ -26,7 +26,7 @@ const Side = ({ className }) => (
       jmgoodman27@gmail.com to get in touch!
       <br />
     </p>
-    <img alt="Profile Image" className={imageStyle} src={profileImg} />
+    <img alt="Profile" className={imageStyle} src={profileImg} />
   </div>
 )
 export default Side

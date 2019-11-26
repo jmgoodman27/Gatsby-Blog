@@ -21,14 +21,14 @@ With BEM, every HTML element has a separate class that acts independently, all c
 
 Here is an example from the docs:
 
-{% highlight html %}
+```HTML
 <form class="search-form">
     <div class="search-form__content">
         <input class="search-form__input">
         <button class="search-form__button">Search</button>
     </div>
 </form>
-{% endhighlight %}
+```
 
 This certainly eliminates any specificity problems and provides a lot of control, but it comes with a tradeoff. Since blocks essentially encapsulate styles, any code written cannot be used outside of the context of that block. That means that when using BEM, our precious time will be spent coming up with class names and writing new CSS, even when we just want to add a small modification. 
 
@@ -38,13 +38,13 @@ This led me to look for a methodology that solved the specificity problem, promo
 
 I found what I was looking for with a utility-first approach known as Atomic CSS (or Functional CSS). Atomic CSS is the practice of using small, immutable classes to create designs– just like building with legos.
 
-{% highlight html %}
+```HTML
 <!-- Example -->
 <div class="flex justify-center">
     <h1 class="color-primary font-lg uppercase">Title</h1>
     <p class="color-secondary">Subtitle</p>
 </div>
-{% endhighlight %}
+```
 
 The idea is that each class does one specific thing and is named after that thing. By building with small classes, writing new CSS is rare, styles don't clash between classes, and semantic class names don't have to be conjured up. This results in a huge productivity boost. Plus, it's fun.
 
@@ -54,7 +54,7 @@ Style guides can dictate the available atomic classes making for a much more con
 
 For reusable UI components, we'll want to have traditional reusable CSS classes instead of atomic classes. However, we can still make use of atomic classes by building our reusable class with atomic building blocks like so: 
 
-{% highlight sass %}
+```Sass
     .btn {
     @extend .b-color-primary;
     @extend .pad-tb-sm;
@@ -62,15 +62,15 @@ For reusable UI components, we'll want to have traditional reusable CSS classes 
     @extend .color-white;
     @extend .border-radius;
     }
-{% endhighlight %}
+```
 
-{% highlight html %}
+```html
 <a href="#" class="btn">Button</a>
-{% endhighlight %}
+```
 
 Another solution to creating reusable components is to use a templating language:
 
-{% highlight html %}
+```html
 {% raw %}
 {% for post in posts %}
 <div class="pad-tb-sm">
@@ -84,7 +84,7 @@ Another solution to creating reusable components is to use a templating language
 </div>
 {% endfor %}
 {% endraw %}
-{% endhighlight %}
+```
 
 A for loop let's us easily maintain our atomic styles across a set of components. This is my preferred way of handling reusable components.
 
@@ -98,7 +98,7 @@ The idea is that the use of atomic classes will make it more rare and therefore 
 
 I make use of atomic classes with CSS Grid to have a few grids ready to go:
 
- {% highlight html %}
+ ```html
 <div class="grid-auto">
   <div>Item 1</div>
   <div>Item 2</div>
@@ -107,9 +107,9 @@ I make use of atomic classes with CSS Grid to have a few grids ready to go:
   <div>Item 1</div>
   <div>Item 2</div>
 </div>
-{% endhighlight %}
+```
 
- {% highlight css %}
+```css
 .grid-auto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -118,7 +118,7 @@ I make use of atomic classes with CSS Grid to have a few grids ready to go:
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-{% endhighlight %}
+```
 
 ##### Responsive Classes
 

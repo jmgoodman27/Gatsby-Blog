@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "linaria/react"
+import { styled }from "linaria/react"
 import { Link } from "gatsby"
 import Footer from "../components/footer"
 
@@ -8,7 +8,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
 
-  const PostContent = -styled.div`
+  const PostContent = styled.div`
     padding: 60px;
     max-width: 1000px;
     margin: 0 auto;
@@ -49,6 +49,7 @@ export default function Template({ data }) {
     </>
   )
 }
+
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

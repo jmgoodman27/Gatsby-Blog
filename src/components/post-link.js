@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "linaria/react"
+import { styled } from "linaria/react"
 
 const Wrapper = styled.div`
   box-shadow: 0 5px 13px #e7e7e7;
