@@ -9,7 +9,7 @@ That's where CSS-in-JS comes into play. For those times where elements need cust
 
 Using Tailwind makes it quick to prototype out components, and if I'm in need of custom or dynamic styling (according to state) then I now have that option. 
 
-[Linaria](https://linaria.now.sh/) is the CSS-in-JS library I decided to go with (instead of Styled Components or Emotion). Linaria is a zero-runtime CSS in JS library, so the end user just gets plain CSS on their browser just like normal. The reason this is so good for me is because it plays very nicely with Tailwind. I can use @screen media queries and @apply directives directly in JS with Linaria. I also like how you are simply creating CSS classes with Linaria and applying them to your elements (can't say I'm a huge fan of styled components). However, Linaria also has a way to create styled components if I ever find myself wanting that functionality. 
+[Linaria](https://linaria.now.sh/) is the CSS-in-JS library I decided to go with (instead of Styled Components or Emotion). Linaria is a zero-runtime CSS in JS library, so the end user just gets plain CSS on their browser just like normal. The reason this is so good for me is because it plays very nicely with Tailwind. I also like how you are simply creating CSS classes with Linaria and applying them to your elements (can't say I'm a huge fan of styled components). However, Linaria also has a way to create styled components if I ever find myself wanting that functionality. 
 
 Zero-runtime has its advantages too and fits in with my web development philosophies. I like building with progressive enhancement in mind, so this stack (Gatsby/React, Linaria, Tailwind, etc.) doesn't actually rely on JavaScript in the browser. It's simply a static site with regular old CSS first, and then React hydrates in the background. 
 
@@ -17,4 +17,4 @@ Linaria supports dynamic styling based on prop values through the use of CSS cus
 
 As far as Tailwind goes, I still have an identical Tailwind setup to other projects with PostCSS and PurgeCSS. 
 
-I'm excited to see if this setup continues to work for me for future Gatsby projects.
+I'm excited to see if this setup continues to work for me for future Gatsby projects. 

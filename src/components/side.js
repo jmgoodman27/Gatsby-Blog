@@ -15,7 +15,7 @@ const Side = ({ className }) => (
       I've been building websites professionally for over 8 years now, and have
       worked with countless businesses and creatives. <br />
       <br />
-      I've now been just focusing on the Shopify platform, and have worked with
+      I've now been focusing on the Shopify platform, and have worked with
       over a dozen different shops doing everything from custom development to
       consulting.
       <br />

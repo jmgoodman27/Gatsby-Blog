@@ -21,7 +21,8 @@ const Posts = ({
   data: {
     allMarkdownRemark: { edges },
   },
-  children
+  children,
+  className
 }) => {
   let Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
@@ -32,6 +33,7 @@ const Posts = ({
     }
 
     let styles = 'container pt-16 md:pt-8 ';
+    styles += className;
     if (grid) styles += gridStyles;
 
     return (

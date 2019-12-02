@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
 
       <div>
         <div className="container md:flex py-8">
-          <Side className="pt-8 md:w-1/3 md:pr-16"></Side>
+          <Side className="pt-8 md:w-1/3 md:pr-8"></Side>
           <Posts className="md:w-2/3" data={data} numPosts="5">
             <div className="pb-8">
               <h2 className="text-35 font-bold pb-2">Blog</h2>
