@@ -41,7 +41,7 @@ export default function Template({ data }) {
             <Link to="/blog"> &larr; Back to Blog</Link>
           </div>
           <h1 className="text-45 font-bold text-center">{frontmatter.title}</h1>
-          <p class="text-center pt-4 text-18">{frontmatter.date}</p>
+          <p className="text-center pt-4 text-18">{frontmatter.date}</p>
         </div>
       </div>
       <PostContent dangerouslySetInnerHTML={{ __html: html }} />

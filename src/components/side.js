@@ -13,17 +13,11 @@ const Side = ({ className }) => (
     <h2 className="text-35 font-bold pb-4">About Me</h2>
     <p>
       I've been building websites professionally for over 8 years now, and have
-      worked with countless businesses and creatives. <br />
-      <br />
-      I've now been focusing on the Shopify platform, and have worked with
-      over a dozen different shops doing everything from custom development to
-      consulting.
-      <br />
-      <br />
-    </p>
-    <p>
-      If you're in need of a Shopify developer, shoot me an email at
-      jmgoodman27@gmail.com to get in touch!
+      worked with countless businesses of all sizes, mainly in the ecommerce space. 
+      <br /><br />
+      I've now been focusing on the Shopify platform, building custom storefront experiences with Shopify's Slate, Vue, GraphQL, and more.  
+      <br /><br />
+      I'm excited about the future of headless commerce and the improvements it'll bring to both user and developer experiences.
       <br />
     </p>
     <img alt="Profile" className={imageStyle} src={profileImg} />

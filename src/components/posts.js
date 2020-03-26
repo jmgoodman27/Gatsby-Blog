@@ -32,9 +32,10 @@ const Posts = ({
       Posts = Posts.slice(0, numPosts);
     }
 
-    let styles = 'container pt-16 md:pt-8 ';
-    styles += className;
-    if (grid) styles += gridStyles;
+    let styles;
+    if (grid) styles += ` ${gridStyles}`;
+    styles += ' container pt-16 md:pt-8 ';
+    styles += ` ${className}`;
 
     return (
       <div className={styles}>
