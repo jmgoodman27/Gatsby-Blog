@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import { styled }from "linaria/react"
 import { Link } from "gatsby"
 import Footer from "../components/footer"
+import Layout from "../components/layout"
+import Prism from "prismjs"
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -11,11 +13,11 @@ export default function Template({ data }) {
   const PostContent = styled.div`
     padding: 60px;
     max-width: 1000px;
+    font-size: 18px;
     margin: 0 auto;
-    p {
-      padding: 10px 0;
-      font-size: 18px;
-      line-height: 2;
+    p, li {
+      padding: 20px 0;
+      line-height: 2.5;
     }
 
     h1,
@@ -29,12 +31,14 @@ export default function Template({ data }) {
     }
 
     li {
-      padding: 0;
+      padding: 0px;
+      list-style-type: disc;
+      margin-left: 20px;
     }
   `
 
   return (
-    <>
+    <Layout>
       <div className="bg-blue py-16">
         <div className="container text-white">
           <div className="py-8 text-center">
@@ -45,8 +49,7 @@ export default function Template({ data }) {
         </div>
       </div>
       <PostContent dangerouslySetInnerHTML={{ __html: html }} />
-      <Footer></Footer>
-    </>
+    </Layout>
   )
 }
 

@@ -20,7 +20,7 @@ const PostLink = ({ post }) => (
     <Wrapper>
       <h3 className="text-22 font-bold">{post.frontmatter.title}</h3>
       <p>{post.frontmatter.date}</p>
-      <p className="pt-4">{post.excerpt}</p>
+      <p className="pt-4 leading-relaxed">{post.excerpt}</p>
     </Wrapper>
   </Link>
 )

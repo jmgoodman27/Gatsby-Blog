@@ -10,8 +10,8 @@ module.exports = {
       'xxxl': '2499px'
     },
     fontFamily: {
-      header: ['Roboto'],
-      body: ['Source Sans Pro']
+      header: ['Roboto', 'serif'],
+      body: ['Arimo', 'sans-serif']
     },
     colors: {
       transparent: 'transparent',

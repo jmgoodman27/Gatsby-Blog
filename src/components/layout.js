@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     <>
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Sans+Pro:300,400"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Arimo:400,700"
           rel="stylesheet"
         />
       </Helmet>
